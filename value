@@ -1,0 +1,184 @@
+local ModeKey = readfile("ModeKey.txt")
+if ModeKey == "epdwc5b2" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/munciseek/Script-Mode/main/V3/Main-Scipt"))()
+end
+
+local KeyUI = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local Cheak = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local close = Instance.new("ImageButton")
+local okb = Instance.new("ImageButton")
+local nook = Instance.new("ImageButton")
+local nofi = Instance.new("TextLabel")
+local UIScale = Instance.new("UIScale")
+
+KeyUI.Name = "KeyUI"
+KeyUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KeyUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = KeyUI
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.350863427, 0, 0.288990825, 0)
+Main.Size = UDim2.new(0, 380, 0, 244)
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Main
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.207894742, 0, 0.0819672123, 0)
+Title.Size = UDim2.new(0, 221, 0, 33)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Key Systeam"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 25.000
+
+TextBox.Parent = Main
+TextBox.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.ClipsDescendants = true
+TextBox.Position = UDim2.new(0.236842111, 0, 0.27868852, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSansItalic
+TextBox.PlaceholderText = "Paste here.."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 20.000
+TextBox.TextWrapped = true
+
+UICorner_2.Parent = TextBox
+
+Cheak.Name = "Cheak"
+Cheak.Parent = Main
+Cheak.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Cheak.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cheak.BorderSizePixel = 0
+Cheak.Position = UDim2.new(0.236842111, 0, 0.569672108, 0)
+Cheak.Size = UDim2.new(0, 75, 0, 37)
+Cheak.Font = Enum.Font.SourceSansBold
+Cheak.Text = "Cheak"
+Cheak.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cheak.TextSize = 20.000
+Cheak.MouseButton1Click:Connect(function()
+	if TextBox.Text == "epdwc5b2" then
+		writefile("ModeKey.txt", ""..TextBox.Text)
+        okb.Visible = true
+		nofi.TextColor3 = Color3.new(0, 1, 0)
+		nofi.Text = "Right key!"
+		wait(1.2)
+		okb.Visible = false
+		nofi.Text = ""
+		wait(1.2)
+		KeyUI:Destroy()
+		wait(0.6)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/munciseek/Script-Mode/main/V3/Main-Scipt"))()
+	else
+		nook.Visible = true
+		nofi.Text = "Wrong kry!"
+		wait(1.2)
+		nook.Visible = false
+		nofi.Text = ""
+		
+	end
+end)
+
+UICorner_3.Parent = Cheak
+
+Clear.Name = "Clear"
+Clear.Parent = Main
+Clear.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.565789461, 0, 0.569672108, 0)
+Clear.Size = UDim2.new(0, 75, 0, 37)
+Clear.Font = Enum.Font.SourceSansBold
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clear.TextSize = 20.000
+
+UICorner_4.Parent = Clear
+
+close.Name = "close"
+close.Parent = Main
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.907894731, 0, 0.0450819656, 0)
+close.Size = UDim2.new(0, 20, 0, 20)
+close.Image = "rbxassetid://11293981586"
+
+okb.Name = "okb"
+okb.Parent = Main
+okb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+okb.BackgroundTransparency = 1.000
+okb.BorderColor3 = Color3.fromRGB(0, 0, 0)
+okb.BorderSizePixel = 0
+okb.Position = UDim2.new(0.789473712, 0, 0.27868852, 0)
+okb.Size = UDim2.new(0, 50, 0, 50)
+okb.Visible = false
+okb.Image = "rbxassetid://13072473310"
+
+nook.Name = "nook"
+nook.Parent = Main
+nook.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nook.BackgroundTransparency = 1.000
+nook.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nook.BorderSizePixel = 0
+nook.Position = UDim2.new(0.789473712, 0, 0.27868852, 0)
+nook.Size = UDim2.new(0, 50, 0, 50)
+nook.Visible = false
+nook.Image = "rbxassetid://13072237774"
+
+nofi.Name = "nofi"
+nofi.Parent = Main
+nofi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nofi.BackgroundTransparency = 1.000
+nofi.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nofi.BorderSizePixel = 0
+nofi.Position = UDim2.new(0.234210521, 0, 0.75, 0)
+nofi.Size = UDim2.new(0, 200, 0, 24)
+nofi.Font = Enum.Font.SourceSans
+nofi.Text = ""
+nofi.TextColor3 = Color3.fromRGB(255, 0, 0)
+nofi.TextSize = 14.000
+
+UIScale.Parent = KeyUI
+
+-- Scripts:
+
+local function MRDGFUZ_fake_script() -- Clear.cas 
+	local script = Instance.new('LocalScript', Clear)
+
+	local kb = script.Parent.Parent.TextBox
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		kb.Text = ""
+	end)
+end
+coroutine.wrap(MRDGFUZ_fake_script)()
+local function WERRJ_fake_script() -- close.cls 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(WERRJ_fake_script)()
+
+writefolder("MODE")
